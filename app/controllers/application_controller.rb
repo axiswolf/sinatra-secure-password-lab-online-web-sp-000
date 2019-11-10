@@ -21,6 +21,11 @@ class ApplicationController < Sinatra::Base
     # signing up displays a failure page if no username and password is given
     # displays log in page if username and password is given
     @user = User.new(:username => params[:username], :password => params[:password])
+    if user.save
+      redirect "/login"
+    else
+      redirect "/failure"
+    end
   end
 
   get '/account' do
