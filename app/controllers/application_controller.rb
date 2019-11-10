@@ -19,6 +19,7 @@ class ApplicationController < Sinatra::Base
   post "/signup" do
     #your code here
     # signing up displays a failure page if no username and password is given
+    # displays log in page if username and password is given
   end
 
   get '/account' do
@@ -33,6 +34,7 @@ class ApplicationController < Sinatra::Base
 
   post "/login" do
     ##your code here
+    # failure if no username and password given
   end
 
   get "/failure" do
